@@ -1,0 +1,360 @@
+:root {
+    /* Fundos */
+    --bg-cor-escura: #eb2561;
+    --bg-cor-sec: #e877b0;
+
+    /* Destaques */
+    --cor-destaque: #fab7cb;
+    --cor-destaque-sec: #e34e87;
+
+    /*textos e bordas */
+    --cor-clara: #ffffff;
+    --cor-cinza-claro: #fe9ebb;
+    --cor-texto-sec: #eea4d8;
+    --cor-texto-escuro: #1f2225;
+
+    /*tipografia*/
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --fonte-menu-size: 16px;
+
+    /* espaçamento */
+    --padding-cartao: 25px;
+    --padding-padrao: 40px;
+    --padding--sessao: 80px;
+    --gap-padrao: 25px;
+
+
+    /* bordas */
+    --borda-arredondada: 12px;
+}
+
+/* configuraçoes basicas */
+* {
+    /* Preenchimento */
+    padding: 0;
+    /* Margem' */
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fonte-padrao);
+    /* Fonte da página */
+    line-height: 1.6;
+    /* define o espaçamento entre as linhas */
+}
+
+
+.menu {
+    position: sticky;
+    top: 0;
+    background-color: var(--bg-cor-escura);
+    color: #f0ecec;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.logo span {
+    color: #deccd1;
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    padding: 5px 10px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: #f0ecec;
+    font-weight: bold;
+    display: block;
+    padding: 15px 10px;
+}
+
+.menu li a:hover {
+    color: var(--cor-destaque);
+    border-bottom: var(--cor-destaque-sec) 1px solid;
+}
+
+/* main */
+
+.page-title {
+    background: linear-gradient(13deg, var(--bg-cor-escura), var(--cor-destaque));
+    color: var(--cor-clara);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.page-title-full {
+    height: 100vh;
+}
+
+.page-title h1 {
+    font-size: 50px;
+    max-width: 700px;
+}
+
+.page-title p {
+    font-size: 20px;
+    opacity: 0.09;
+    max-width: 700px;
+}
+
+/* sessao */
+.sessao {
+    padding: var(--padding--sessao) var(--padding-padrao);
+    text-align: center;
+    background-color: var(--cor-cinza-claro);
+}
+
+.sessao h2 {
+    margin-bottom: 30px;
+}
+
+destaque {
+    background-color: var(--cor-cinza-claro);
+}
+
+/* botoes */
+
+
+/* cards */
+
+
+.cartoes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: var(--gap-padrao);
+}
+
+.cartao {
+    background-color: var(--cor-clara);
+    padding: var(--padding-padrao);
+    border-radius: var(--borda-arredondada);
+    box-shadow: 0 5px rgba(196, 52, 109, 0.5);
+    transition: transform 0.3s, box-shadow 0.3s ease;
+}
+
+.cartao:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 2px 45px rgba(0, 0, 0, 0.12);
+}
+
+/* cartao serviço */
+.catao-serv {
+    width: 300px;
+}
+
+/* cartão depoimento */
+
+.cartao-dep {
+    width: 350px;
+}
+
+.cartao-dep p {
+    font-size: 14px;
+    color: #d61c60;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.cartao-dep strong {
+    display: block;
+    color: var(--cor-texto-escuro);
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* redes sociais */
+
+.sessao .subtitulo {
+    margin-top: 10px;
+    margin-bottom: 40px;
+    color: var(--cor-texto-escuro);
+    opacity: 0.8;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+    gap: var(--gap-padrao);
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+}
+
+.rede {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 25px;
+    border-radius: var(--borda-arredondada);
+    background-color: var(--bg-cor-escura);
+    color: var(--cor-clara);
+    font-weight: 600;
+    text-decoration: none;
+    transition: all 0.3 ease;
+}
+
+.rede.instagram {
+    background-color: #e1306c;
+}
+
+.rede.whatsapp {
+    background-color: #aa2d5a;
+}
+
+.rede.whatsapp:hover {
+    background-color: #a02655;
+}
+
+.rede.facebook {
+    background-color: #b83f65;
+}
+
+.rede.facebook:hover {
+    background-color: #e1306c;
+}
+
+.rede i {
+    font-size: 18px;
+}
+
+.rede:hover {
+    transform: translateY(-3px);
+}
+
+/* rodapé */
+.footer {
+    width: 100%;
+    background-color: var(--bg-cor-escura);
+    color: var(--cor-clara);
+    text-align: center;
+    margin: 0;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.footer-logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.footer-logo span {
+    color: var(--cor-destaque);
+
+}
+
+
+.footer-texto {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* Responsividade( adaptar as telas) */
+
+/* desktop grande ou TV */
+
+/* tablet ate 1024px */
+@media (max-width:1024px) {
+    main {
+        display: flex;
+    }
+
+    /* posiçao */
+
+    /* menu */
+    .menu {
+        flex-direction: column;
+        justify-content: flex-start;
+        width: 80px;
+        order: 2;
+        align-items: center;
+        padding: 20px 0;
+    }
+
+    .menu.logo{
+        position: sticky;
+        top: 20px;
+    }
+
+    .menu p{
+        display: none;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        position:sticky;
+        top: 70px;
+    }
+
+    menu ul li a{
+        font-size: 25px;
+    }
+
+    .menu a span{
+        display: none;
+
+    }
+    
+    .cartao-dep{
+        width: 90%;
+    }
+    
+
+
+}
+
+/* celular 768px */
+
+@media(max-width: 768px){
+    .menu{
+        position: fixed;
+        top:auto;
+        height: auto;
+        bottom: 20px;
+        left:50%;
+        transform: tranlateX(-50%);
+        width: 90%;
+        max-width:400px;
+        z-index:2000;
+        flex-direction: row;
+        border-radius: 30px;
+        justify-content:center;
+        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+        border: 1px solid rgba (255, 255, 255, 0.1);
+
+    }
+    
+    .menu ul{
+        flex-direction: row;
+    }
+
+    .menu li a{
+        text-shadow: 0 2px 40px rgba(200, 200, 200, 0.3) ;
+    }
+
+    body{
+        margin-bottom: 100px;
+    }
+}
