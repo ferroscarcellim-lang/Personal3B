@@ -5,13 +5,13 @@
 
     /* Destaques */
     --cor-destaque: #fab7cb;
-    --cor-destaque-sec: #e34e87;
+    --cor-destaque-sec: #e2bfcd;
 
     /*textos e bordas */
-    --cor-clara: #ffffff;
-    --cor-cinza-claro: #fe9ebb;
+    --cor-clara: #de4980;
+    --cor-cinza-claro: #fdbacd;
     --cor-texto-sec: #eea4d8;
-    --cor-texto-escuro: #1f2225;
+    --cor-texto-escuro: #dae2e9;
 
     /*tipografia*/
     --fonte-padrao: Arial, Helvetica, sans-serif;
@@ -22,6 +22,7 @@
     --padding-padrao: 40px;
     --padding--sessao: 80px;
     --gap-padrao: 25px;
+    --alura-menu: 80px;
 
 
     /* bordas */
@@ -50,10 +51,11 @@ body {
 
 
 .menu {
+    height: var(--altura-menu);
     position: sticky;
     top: 0;
     background-color: var(--bg-cor-escura);
-    color: #f0ecec;
+    color: #1d1a1a;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -66,7 +68,7 @@ body {
 }
 
 .logo span {
-    color: #deccd1;
+    color: #1d191a;
 }
 
 .menu ul {
@@ -78,7 +80,7 @@ body {
 
 .menu li a {
     text-decoration: none;
-    color: #f0ecec;
+    color: #141313;
     font-weight: bold;
     display: block;
     padding: 15px 10px;
@@ -104,7 +106,10 @@ body {
 }
 
 .page-title-full {
-    height: 100vh;
+    height: calc(100vh - var(--altura-menu));
+    background-image: url(../img/logo1.jpg);
+    background-repeat: no-repeat;
+    background-size: auto;
 }
 
 .page-title h1 {
@@ -150,7 +155,7 @@ destaque {
     background-color: var(--cor-clara);
     padding: var(--padding-padrao);
     border-radius: var(--borda-arredondada);
-    box-shadow: 0 5px rgba(196, 52, 109, 0.5);
+    box-shadow: 0 5px rgba(222, 216, 218, 0.5);
     transition: transform 0.3s, box-shadow 0.3s ease;
 }
 
@@ -172,7 +177,7 @@ destaque {
 
 .cartao-dep p {
     font-size: 14px;
-    color: #d61c60;
+    color: #fdfafb;
     margin-bottom: 20px;
     line-height: 1.6;
 }
@@ -273,7 +278,16 @@ destaque {
 
 /* Responsividade( adaptar as telas) */
 
+
 /* desktop grande ou TV */
+
+@media (min-width: 1200px){
+    .sessao{
+        width: 1200px;
+        
+        margin: 0 auto;
+    }
+}
 
 /* tablet ate 1024px */
 @media (max-width:1024px) {
